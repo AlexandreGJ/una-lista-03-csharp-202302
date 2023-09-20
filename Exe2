@@ -1,0 +1,64 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+    double valorCompra,valorPago,troco,trocoInicial;
+	int nota50=0,nota20=0,nota10=0,nota5=0,nota2=0,nota1=0;
+	Console.WriteLine("Qual o valor total da compra realizada?");
+    valorCompra=double.Parse(Console.ReadLine());
+	Console.WriteLine("Qual o valor do pagamento? ");
+	valorPago=double.Parse(Console.ReadLine());
+    trocoInicial=(valorPago-valorCompra);
+	troco=(valorPago-valorCompra);
+	
+	if (valorPago<valorCompra)
+		Console.WriteLine("Quantia paga é insuficiente para realizar a compra.");
+	
+    else 	
+	{
+		
+	while (troco>=50){
+		nota50++;
+		troco-=50;
+	}
+		while (troco>=20){
+		nota20++;
+		troco-=20;
+	}	
+      	while (troco>=10){
+		nota10++;
+		troco-=10;
+	}		  
+	    while (troco>=10){
+		nota10++;
+		troco-=10;
+	}	
+		while (troco>=5){
+		nota5++;
+		troco-=5;
+	}	
+		while (troco>=2){
+		nota2++;
+		troco-=2;
+	}
+		while (troco>=1){
+		nota1++;
+		troco-=1;
+	}		
+		Console.WriteLine("Valor da compra: "+valorCompra);
+		Console.WriteLine("Valor pago: "+valorPago);
+		Console.WriteLine("Troco: "+trocoInicial);
+		Console.WriteLine("Notas de 50 : "+nota50);
+		Console.WriteLine("Notas de 20 : "+nota20);
+		Console.WriteLine("Notas de 10 : "+nota10);
+		Console.WriteLine("Notas de 5 : "+nota5);
+		Console.WriteLine("Notas de 2 : "+nota2);
+		Console.WriteLine("Notas de 1 : "+nota1);
+		
+		Console.ReadLine();
+	}
+
+	}
+}
