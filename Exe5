@@ -1,0 +1,37 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+double num1,num2;
+ int operacao;
+Console.WriteLine("Digite o primeiro numeros");
+num1=double.Parse(Console.ReadLine());
+Console.WriteLine("Digite o segundo numeros");
+num2=double.Parse(Console.ReadLine());
+
+Console.WriteLine("Escolha o numero da operação a seguir deseja realizar? ");
+Console.WriteLine("1 : -");
+Console.WriteLine("2 : +");
+Console.WriteLine("3 : *");
+Console.WriteLine("4 : /");
+Console.WriteLine("5 : ^");
+operacao=int.Parse(Console.ReadLine());
+
+if (operacao==1)
+    Console.WriteLine("A subtração dos dois numeros é: "+(num1-num2));
+else if (operacao==2)
+    Console.WriteLine("A soma dos dois numeros é: "+(num1+num2));
+else if (operacao==3)
+    Console.WriteLine("A multiplicação dos dois numeros é: "+(num1*num2));
+else if (operacao==4)
+    Console.WriteLine("A divisão dos dois numero é:"+(num1/num2));
+else if (operacao==5)
+    Console.WriteLine("A potencia do primeiro numero elevado ao segundo numero é: "+(Math.Pow(num1,num2)));
+else
+Console.WriteLine("Numero da operação invalida");
+
+}
+
+	}
