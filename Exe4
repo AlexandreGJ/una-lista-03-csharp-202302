@@ -1,0 +1,33 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		double area,perimetro,volume,opcao,raio;
+       
+       Console.WriteLine("Digite o numero de acordo com a operação que deseja realizar");
+       Console.WriteLine("1: calcular e imprimir o perímetro do círculo.");
+       Console.WriteLine("2: calcular e imprimir a área do círculo.");
+       Console.WriteLine("3: calcular e imprimir o volume da esfera.");
+       opcao=Convert.ToDouble(Console.ReadLine());
+        
+       Console.WriteLine("Digite o valor  do Raio: ");
+       raio=Convert.ToDouble(Console.ReadLine());
+        
+       area=Math.PI*Math.Pow(raio,2);
+       perimetro=2*Math.PI*raio;
+       volume=(4/3)*Math.PI*Math.Pow(raio,3);
+       
+        if (opcao==1)
+         Console.WriteLine("O perimetro do círculo é: "+perimetro);
+        else if(opcao==2)
+            Console.WriteLine("A aréa do círculo é: "+area);
+        else if (opcao==3)
+            Console.WriteLine("O o volume  da esfera é: "+volume);
+        else 
+            Console.WriteLine("Código de operação invalido");
+        Console.ReadLine();
+}
+
+	}
