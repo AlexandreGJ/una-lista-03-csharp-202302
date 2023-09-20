@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int num1,num2,numAleatorio,numMenor,numMaior;
+		Console.WriteLine("Digite o primeiro numero");
+		num1=int.Parse(Console.ReadLine());
+		Console.WriteLine("Digite o segundo numero");
+	    num2=int.Parse(Console.ReadLine());
+		
+		if (num1<num2)
+			numMenor=num1;
+		else 
+			numMenor=num2;
+		
+		if (num1>num2)
+			numMaior=num1;
+		else
+			numMaior=num2;
+		
+		 Random random = new Random ();
+		
+		numAleatorio= random.Next(numMenor,numMaior);
+		
+	
+		Console.WriteLine("O numero sorteado entre os dois numeros foi: "+numAleatorio);
+		
+		if(numAleatorio % 2 == 0)
+      
+    Console.WriteLine("O numero "+numAleatorio+" é par");
+		
+		else 
+			 Console.WriteLine("O Numero "+numAleatorio+" é impar");
+			
+		Console.ReadLine();
+	
+		
+	}
+}
